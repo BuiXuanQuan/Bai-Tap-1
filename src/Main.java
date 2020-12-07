@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        File file = new File("D:\\IT\\Bitmap\\anh.bmp");
+        File file = new File("C:\\Users\\ABC\\IdeaProjects\\Bai Tap 1\\BitmapImage\\anh.bmp");
 
         BufferedImage image = ImageIO.read(file);
 
@@ -36,7 +36,7 @@ public class Main {
         }
         // Lưu ảnh tại 1 file mới
         try {
-            file = new File("D:\\IT\\NewBitmap\\anhMoi.bmp");
+            file = new File("C:\\Users\\ABC\\IdeaProjects\\Bai Tap 1\\NewBitmapImage\\anhMoi.bmp");
          ImageIO.write(image,"jpg",file);
         }catch (Exception e){
             System.out.println(e);
