@@ -15,11 +15,11 @@ public class Main {
         int chieuRong = image.getWidth();
         int chieuCao = image.getHeight();
 
-        // convert to green image
+        // chuyển màn ảnh từ màu đỏ sang màu xanh
         for (int y = 0;y<chieuCao;y++){
             for (int x = 0;x<chieuRong;x++){
 
-                int mauSac = image.getRGB(x,y); // getRGB () BufferedImage của trả về giá trị của các color pixel tại  (x,y).
+                int mauSac = image.getRGB(x,y); // getRGB () của BufferedImage  trả về giá trị của các color pixel tại  (x,y).
 
                 int alpha = (mauSac>>24)&0xff; // dịch sang phải giá trị của màu sắc 24bits(phép toán thao tác bit) và dùng lấy 8bit
                 int mauDo = (mauSac>>16)&0xff;
