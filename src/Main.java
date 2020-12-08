@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        File file = new File("C:\\Users\\ABC\\IdeaProjects\\Bai Tap 1\\BitmapImage\\anh.bmp");
+
+        File file= new File("C:\\Users\\ABC\\IdeaProjects\\Bai Tap 1\\BitmapImage\\anh.bmp");
 
         BufferedImage image = ImageIO.read(file);
 
@@ -24,12 +25,13 @@ public class Main {
                 int alpha = (mauSac>>24)&0xff; // dịch sang phải giá trị của màu sắc 24bits(phép toán thao tác bit) và dùng lấy 8bit
                 int mauDo = (mauSac>>16)&0xff;
                 int mauXanh = mauSac&0xff;
-                mauDo = 255 - mauDo;
-                mauXanh = 255 - mauXanh;
+//                mauDo = 255 - mauDo;
+//                mauXanh = 255 - mauXanh;
 
-                mauSac =  (alpha<<24) |(mauDo<<16) | mauXanh;
+                mauSac = (mauDo<<16)  | mauXanh;
 
-                image.setRGB(x, y, mauSac);
+                image.setRGB(300, 300, mauSac);
+
 
 
             }
